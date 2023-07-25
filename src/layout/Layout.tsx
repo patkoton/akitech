@@ -1,14 +1,30 @@
 import { Fragment, useEffect } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { NavLink, useLocation } from 'react-router-dom'
-import logo from '../assets/images/new_logo.png'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { AiOutlineInstagram } from 'react-icons/ai'
+import { FiFacebook } from 'react-icons/fi'
+import { BsChat } from 'react-icons/bs'
+import logo from '../assets/images/logo.png'
+import whiteLogo from '../assets/images/logo_white.png'
 import '../App.css'
+import Button from '../elements/Button'
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Works', href: '/#work' },
   { name: 'Contact', href: '/#contact' },
+]
+const footer = [
+  { name: 'Others', href: '/' },
+  { name: 'Roofings', href: '/#roofings' },
+  { name: 'Windows', href: '/#windows' },
+  { name: 'Contact Us', href: '/#contact' },
+]
+const icon = [
+  { icon: <AiOutlineInstagram />, href: '/' },
+  { icon: <FiFacebook />, href: '/' },
+  { icon: <BsChat />, href: '/' },
 ]
 
 export default function Layout(props: any) {
@@ -34,14 +50,14 @@ export default function Layout(props: any) {
   return (
     <>
     {/* NAVBAR */}
-    <Disclosure as="nav" className="bg-deepBlue sticky top-0 z-10 py-5 md:py-0">
+    <Disclosure as="nav" className="bg-gradient-to-r from-white from-70% to-lightCyan to-70% sticky top-0 z-10 py-5 md:py-0 font-inter">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-5 md:mx-12 lg:mx-48">
-            <div className="relative flex h-6 md:h-20 items-center justify-between">
+          <div className="max-w-7xl mx-5 lg:mx-20">
+            <div className="relative flex h-6 md:h-20 items-center justify-around">
               <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md text-active hover:bg-white hover:text-active focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -53,26 +69,29 @@ export default function Layout(props: any) {
               <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <NavLink to='/'>
-                  <img className="block h-8 w-auto" src={logo} alt="AKERA" />
+                    <img className="block h-8 w-auto" src={logo} alt="AKITECH" />
                   </NavLink>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex justify-center items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               {/* Medium Device NavLinks */}
-                <div className="hidden sm:ml-6 sm:block md:pl-5 lg:pl-6 xl:pl-20">
-                  <div className="flex space-x-4 md:space-x-12">
+                <div className="hidden sm:block md:flex items-center md:space-x-12 lg:space-x-48">
+                  <div className="flex items-center space-x-4 md:space-x-6">
                     {navigation.map((item) => (
                       <NavLink
                         key={item.name}
                         to={item.href}
                         className={({isActive}) => {
-                          return 'px-1 xl:px-2 py-2 rounded-md text-base' +
-                          (isActive ? 'bg-deepBlue text-white font-semibold' : 'text-white font-medium')
+                          return 'px-1 xl:px-2 py-2 rounded-md text-lg' +
+                          (isActive ? 'bg-white text-black font-bold' : 'text-active font-medium')
                         }}
                       >
                         {item.name}
                       </NavLink>
                     ))}
+                  </div>
+                  <div>
+                    <Button children='Contact Us' />
                   </div>
                 </div>
               </div>
@@ -87,19 +106,22 @@ export default function Layout(props: any) {
                     key={item.name}
                     to={item.href}
                     className={({isActive}) => {
-                        return 'block px-3 py-1 rounded-md text-base font-medium' +
-                        (isActive ? 'bg-deepBlue text-white' : 'text-white')
+                        return 'block px-3 py-2 rounded-md text-base font-medium' +
+                        (isActive ? 'bg-white text-dark' : 'text-dark')
                     }}
                     >
                         {item.name}
                 </NavLink>
               ))}
+              <div className='pl-2'>
+                <Button children='Contact Us' />
+              </div>
             </div>
           </Disclosure.Panel>
         </>
       )}
     </Disclosure>
-    <div className='bg-gray-300'>
+    <div className='bg-darkWhite'>
         <div className='max-w-7xl min-h-screen mx-5 md:mx-12 lg:mx-48'>
           {props.children}
         </div>
@@ -109,8 +131,33 @@ export default function Layout(props: any) {
 
     {/* FOOTER */}
     <footer>
-      <div className='bg-deepBlue h-16 flex flex-wrap justify-center items-center text-roboto'>
-        <p className='text-white font-medium text-xs md:text-sm'>PatPortfolio@2023. All rights reserved.</p>
+      <div className='bg-active py-5 md:flex md:flex-wrap justify-between items-center text-roboto px-5 lg:px-20'>
+        <div>
+          <img className="block h-8 w-auto" src={whiteLogo} alt="AKITECH" />
+        </div>
+        <div className='flex items-center space-x-1'>
+          {footer.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className=
+                'px-1 xl:px-2 py-2 rounded-md text-sm lg:text-xl text-white font-medium'
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+        <div className='flex items-center space-x-2'>
+          {icon.map((item) => (
+            <Link
+              to={item.href}
+              className=
+                'px-1 xl:px-2 py-2 rounded-md text-sm xl:text-lg text-white font-medium'
+            >
+              {item.icon}
+            </Link>
+          ))}
+        </div>
       </div>
     </footer>
     </>
