@@ -50,7 +50,7 @@ export default function Layout(props: any) {
   return (
     <>
     {/* NAVBAR */}
-    <Disclosure as="nav" className="bg-gradient-to-r from-white from-70% to-lightCyan to-70% sticky top-0 z-10 py-5 md:py-0 font-inter">
+    <Disclosure as="nav" className="bg-gradient-to-r from-white from-70 to-lightCyan to-70 sticky top-0 z-10 py-5 md:py-0 font-inter">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-5 lg:mx-20">
@@ -121,8 +121,8 @@ export default function Layout(props: any) {
         </>
       )}
     </Disclosure>
-    <div className='bg-darkWhite'>
-        <div className='max-w-7xl min-h-screen mx-5 md:mx-12 lg:mx-48'>
+    <div className='bg-white'>
+        <div className='max-w-7xl min-h-screen'>
           {props.children}
         </div>
     </div>
@@ -152,7 +152,7 @@ export default function Layout(props: any) {
             <Link
               to={item.href}
               className=
-                'px-1 xl:px-2 py-2 rounded-md text-sm xl:text-lg text-white font-medium'
+                'px-1 xl:px-2 py-2 rounded-md text-sm lg:text-xl text-white font-medium'
             >
               {item.icon}
             </Link>
