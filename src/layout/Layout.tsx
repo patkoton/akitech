@@ -12,19 +12,19 @@ import Button from '../elements/Button'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Works', href: '/#work' },
+  { name: 'Works', href: '/#works' },
   { name: 'Contact', href: '/#contact' },
 ]
 const footer = [
-  { name: 'Others', href: '/' },
+  { name: 'Others', href: '/#others' },
   { name: 'Roofings', href: '/#roofings' },
   { name: 'Windows', href: '/#windows' },
   { name: 'Contact Us', href: '/#contact' },
 ]
 const icon = [
-  { icon: <AiOutlineInstagram />, href: '/' },
-  { icon: <FiFacebook />, href: '/' },
-  { icon: <BsChat />, href: '/' },
+  { icon: <AiOutlineInstagram />, href: 'https://www.instagram.com/kehinde.emmanuel.14/' },
+  { icon: <FiFacebook />, href: 'https://web.facebook.com/kehinde.emmanuel.14' },
+  { icon: <BsChat />, href: 'https://wa.link/91ftps' },
 ]
 
 export default function Layout(props: any) {
@@ -133,7 +133,9 @@ export default function Layout(props: any) {
     <footer>
       <div className='bg-active py-5 md:flex md:flex-wrap justify-between items-center text-roboto px-5 lg:px-20'>
         <div>
-          <img className="block h-8 w-auto" src={whiteLogo} alt="AKITECH" />
+          <Link to='/'>
+            <img className="block h-8 w-auto" src={whiteLogo} alt="AKITECH" />
+          </Link>
         </div>
         <div className='flex items-center space-x-1'>
           {footer.map((item) => (
@@ -141,7 +143,7 @@ export default function Layout(props: any) {
               key={item.name}
               to={item.href}
               className=
-                'px-1 xl:px-2 py-2 rounded-md text-sm lg:text-xl text-white font-medium'
+                'px-1 xl:px-2 py-2 rounded-md text-sm lg:text-lg text-white font-medium'
             >
               {item.name}
             </Link>
@@ -152,7 +154,7 @@ export default function Layout(props: any) {
             <Link
               to={item.href}
               className=
-                'px-1 xl:px-2 py-2 rounded-md text-sm lg:text-xl text-white font-medium'
+                'px-1 xl:px-2 py-2 rounded-md text-sm lg:text-lg text-white font-medium'
             >
               {item.icon}
             </Link>

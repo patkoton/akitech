@@ -4,7 +4,7 @@ import { image1 } from '../data'
 
 const Windows = () => {
   return (
-    <div>
+    <div id='windows'>
       <Sections headingH1='Windows'
                 img1={image1.w_img1}
                 img2={image1.w_img2}

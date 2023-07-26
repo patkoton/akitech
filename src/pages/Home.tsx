@@ -6,6 +6,7 @@ import Roofs from '../components/Roofs'
 import Others from '../components/Others'
 import CTA from '../components/CTA'
 import Testimonial from '../components/Testimonial'
+import Contact from '../components/Contact'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Others />
       <CTA />
       <Testimonial />
+      <Contact />
     </Layout>
   )
 }

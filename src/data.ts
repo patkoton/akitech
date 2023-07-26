@@ -49,3 +49,29 @@ export const image3 = ((): Imagex => ({
     o_img5: require('./assets/images/window_7.png')
     }
 ))();
+
+
+
+export type Imagew = {
+    t_img1: string
+    t_img2: string
+}
+const image4 = ((): Imagew => ({  
+    t_img1: require('./assets/images/person_2.png'),
+    t_img2: require('./assets/images/person_3.png'),
+    }
+))();
+export const testContent = [
+    {
+        image: image4.t_img1,
+        name: 'Chief Orukotan',
+        role: 'Customers',
+        description: 'Lorem ipsum dolor sit amet consectetur. Nunc justo quam turpis bibendum sit velit dis neque. Erat nunc in non fermentum mauris tempor sed. Dictum diam vel in pharetra gravida proin sit.'
+    },
+    {
+        image: image4.t_img2,
+        name: 'Chief Orukotan',
+        role: 'Customers',
+        description: 'Lorem ipsum dolor sit amet consectetur. Nunc justo quam turpis bibendum sit velit dis neque. Erat nunc in non fermentum mauris tempor sed. Dictum diam vel in pharetra gravida proin sit.'
+    },
+]

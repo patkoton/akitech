@@ -3,7 +3,7 @@ import { image3 } from '../data'
 
 const Others = () => {
   return (
-    <div>
+    <div id='others'>
       <Sections headingH1='Other Products'
                 img1={image3.o_img1}
                 img2={image3.o_img2}

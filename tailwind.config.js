@@ -35,6 +35,8 @@ module.exports = withMT({
       'lightPink': '#EDE0D8',
       'lightBlue': '#D9E2EB',
       'lightGreen': '#E6F1ED',
+      'orange': '#FFAB07',
+      'lightWine': 'rgba(153, 0, 44, 0.04)',
     }
   },
   plugins: [
