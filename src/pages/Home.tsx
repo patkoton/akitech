@@ -5,6 +5,7 @@ import Windows from '../components/Windows'
 import Roofs from '../components/Roofs'
 import Others from '../components/Others'
 import CTA from '../components/CTA'
+import Testimonial from '../components/Testimonial'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Roofs />
       <Others />
       <CTA />
+      <Testimonial />
     </Layout>
   )
 }
