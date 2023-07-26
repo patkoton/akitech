@@ -21,7 +21,7 @@ export default function Button({children, className}: ButtonProps) {
   }
 
   return (
-    <button onClick={handleClick} className={`cursor-pointer border-none rounded-md bg-active outline-none transition-all py-1 md:py-2 + ${children === 'Contact Us' ? 'px-6 md:px-12' : 'px-6 md:px-20'}`}>
+    <button onClick={handleClick} className={`cursor-pointer border-none rounded-md bg-active outline-none transition-all py-2 + ${children === 'Contact Us' ? 'px-6 md:px-12' : 'px-6 md:px-20'}`}>
       <p className='font-inter font-medium text-sm md:text-lg text-white'>{children}</p>
     </button>
   )
