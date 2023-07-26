@@ -82,7 +82,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-center mt-8">
+                <div className="flex justify-center mt-8 md:mb-4">
                     <Button children='Contact Us' />
                 </div>
             </form>
