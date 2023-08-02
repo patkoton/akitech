@@ -1,6 +1,6 @@
 import { useForm, Resolver } from "react-hook-form"
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
+//import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 type FormValues = {
@@ -33,18 +33,18 @@ const Contact = () => {
       } = useForm<FormValues>({ resolver })
     //   const onSubmit = handleSubmit((data) => console.log(data))
 
-    const toastifySuccess = () => {
-        toast('Form sent!', {
-          position: 'bottom-right',
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,  
-          draggable: false,
-          className: 'submit-feedback success',
-          toastId: 'notifyToast'
-        });
-      };
+    // const toastifySuccess = () => {
+    //     toast('Form sent!', {
+    //       position: 'bottom-right',
+    //       autoClose: 5000,
+    //       hideProgressBar: true,
+    //       closeOnClick: true,
+    //       pauseOnHover: true,  
+    //       draggable: false,
+    //       className: 'submit-feedback success',
+    //       toastId: 'notifyToast'
+    //     });
+    // };
 
     //   const onSubmit = async (data: any, e: any) => {
     //     const { name, email, phone, inquiry, message } = data;
