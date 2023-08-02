@@ -64,14 +64,14 @@ const image4 = ((): Imagew => ({
 export const testContent = [
     {
         image: image4.t_img1,
-        name: 'Chief Orukotan',
-        role: 'Customers',
+        name: 'Chief Adaralegbe',
+        role: 'Customer',
         description: 'Lorem ipsum dolor sit amet consectetur. Nunc justo quam turpis bibendum sit velit dis neque. Erat nunc in non fermentum mauris tempor sed. Dictum diam vel in pharetra gravida proin sit.'
     },
     {
         image: image4.t_img2,
-        name: 'Chief Orukotan',
-        role: 'Customers',
+        name: 'Chief Adaralegbe',
+        role: 'Customer',
         description: 'Lorem ipsum dolor sit amet consectetur. Nunc justo quam turpis bibendum sit velit dis neque. Erat nunc in non fermentum mauris tempor sed. Dictum diam vel in pharetra gravida proin sit.'
     },
 ]
