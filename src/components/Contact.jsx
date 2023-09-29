@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const form = useRef();
 
   const [user_name, setName] = useState("");
@@ -19,7 +19,7 @@ const Contact = () => {
       .then((response)=>{
         if (response.data.status === 'success') {
             alert("Message Sent.");
-            history.push('/my-new-page'); // Redirect to new page
+            navigate('/my-new-page'); // Redirect to new page
             resetForm();
         } else if (response.data.status === 'fail') {
             alert("Message failed to send.")
@@ -31,9 +31,7 @@ const Contact = () => {
         setEmail('') 
         setPhone('')
         setMessage('')
-      }
-
-      
+      }    
   }
 
   return (
