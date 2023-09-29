@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
-//import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
-  //const history = useHistory();
+  const navigate = useNavigate();
   const form = useRef();
 
   const sendEmail = (event) => {
@@ -13,9 +13,10 @@ const Contact = () => {
       emailjs.sendForm('service_fb0h3r9', 'template_vs8fpyr', form.current, 'Pl2-CWjPBJYUaQXcu')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        //history.push('/my-new-page'); // Redirect to new page
+        navigate('/success');
         }, (err) => {
         console.log('FAILED...', err);
+        navigate('/failed');
       });
   } 
 
