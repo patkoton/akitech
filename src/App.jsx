@@ -4,6 +4,7 @@ import Lazy from './layout/Lazy';
 
 export default function App() {
   const Home = lazy(()=> import('./pages/Home'))
+  const Success = lazy(()=> import('./pages/Success'))
   const NotFound = lazy(()=> import('./components/NotFound'))
 
   
@@ -29,6 +30,7 @@ export default function App() {
     <Suspense fallback={<Lazy/>}>
       <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/my-new-page' element={<Success/>}/>
           <Route path='/404' element={<NotFound/>}/>
           <Route path='*' element={<NotFound/>}/>
       </Routes>

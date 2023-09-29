@@ -1,20 +1,40 @@
+import React, { useRef, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
-import React, { useRef } from 'react';
 
 
 const Contact = () => {
+  const history = useHistory();
   const form = useRef();
 
-  const sendEmail = (e) => {
-      e.preventDefault();
+  const [user_name, setName] = useState("");
+  const [user_email, setEmail] = useState("");
+  const [contact_number, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (event) => {
+      event.preventDefault();
 
       emailjs.sendForm('service_fb0h3r9', 'template_vs8fpyr', form.current, 'Pl2-CWjPBJYUaQXcu')
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        }, (err) => {
-        console.log('FAILED...', err);
-      });
-  } 
+      .then((response)=>{
+        if (response.data.status === 'success') {
+            alert("Message Sent.");
+            history.push('/my-new-page'); // Redirect to new page
+            resetForm();
+        } else if (response.data.status === 'fail') {
+            alert("Message failed to send.")
+        }
+      })
+
+      const resetForm = () => {
+        setName('')
+        setEmail('') 
+        setPhone('')
+        setMessage('')
+      }
+
+      
+  }
 
   return (
     <div className='bg-darkWhite pt-1 md:pb-20 md:px-60 font-inter text-black' id='contact'>
@@ -34,6 +54,8 @@ const Contact = () => {
                               name="user_name"
                               autoComplete="given-name"
                               className="block w-full rounded-md border-0 px-3.5 py-2 bg-lightWine text-black shadow-sm placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-active sm:text-sm sm:leading-6"
+                              value={user_name}
+                              onChange={(e) => setName(e.target.value)}
                           />
                           </div>
                       </div>
@@ -47,6 +69,8 @@ const Contact = () => {
                               name="user_email"
                               autoComplete="email"
                               className="block w-full rounded-md border-0 px-3.5 py-2 bg-lightWine text-black shadow-sm placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-active sm:text-sm sm:leading-6"
+                              value={user_email}
+                              onChange={(e) => setEmail(e.target.value)}
                           />
                           </div>
                       </div>
@@ -60,6 +84,8 @@ const Contact = () => {
                             name="contact_number"
                             autoComplete="tel"
                             className="block w-full rounded-md border-0 px-3.5 py-2 bg-lightWine text-black shadow-sm placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-active sm:text-sm sm:leading-6"
+                            value={contact_number}
+                                onChange={(e) => setPhone(e.target.value)}
                         />
                         </div>
                       </div>
@@ -87,6 +113,8 @@ const Contact = () => {
                               rows={6}
                               className="block w-full rounded-md border-0 px-3.5 py-2 bg-lightWine text-black shadow-sm placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-active sm:text-sm sm:leading-6"
                               defaultValue={''}
+                              value={message}
+                              onChange={(e) => setMessage(e.target.value)}
                           />
                           </div>
                       </div>
