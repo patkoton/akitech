@@ -1,4 +1,3 @@
-import React from 'react'
 import window1 from '../assets/images/window_1.png'
 import window2 from '../assets/images/window_2.png'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import Sections from './Sections'
 import { image1 } from '../data'
 

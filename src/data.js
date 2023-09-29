@@ -1,11 +1,4 @@
-export type Imagez = {
-    w_img1: string
-    w_img2: string
-    w_img3: string
-    w_img4: string
-    w_img5: string
-}
-export const image1 = ((): Imagez => ({  
+export const image1 = (() => ({  
     w_img1: require('./assets/images/window_4.png'),
     w_img2: require('./assets/images/window_5.png'),
     w_img3: require('./assets/images/window_3b.png'),
@@ -16,14 +9,7 @@ export const image1 = ((): Imagez => ({
 
 
 
-export type Imagey = {
-    r_img1: string
-    r_img2: string
-    r_img3: string
-    r_img4: string
-    r_img5: string
-}
-export const image2 = ((): Imagey => ({  
+export const image2 = (() => ({  
     r_img1: require('./assets/images/window_4.png'),
     r_img2: require('./assets/images/roof_2.png'),
     r_img3: require('./assets/images/roof_1b.png'),
@@ -34,14 +20,7 @@ export const image2 = ((): Imagey => ({
 
 
 
-export type Imagex = {
-    o_img1: string
-    o_img2: string
-    o_img3: string
-    o_img4: string
-    o_img5: string
-}
-export const image3 = ((): Imagex => ({  
+export const image3 = (() => ({  
     o_img1: require('./assets/images/window_4.png'),
     o_img2: require('./assets/images/window_5.png'),
     o_img3: require('./assets/images/others.png'),
@@ -52,11 +31,7 @@ export const image3 = ((): Imagex => ({
 
 
 
-export type Imagew = {
-    t_img1: string
-    t_img2: string
-}
-const image4 = ((): Imagew => ({  
+const image4 = (() => ({  
     t_img1: require('./assets/images/person_2.png'),
     t_img2: require('./assets/images/person_3.png'),
     }

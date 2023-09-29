@@ -27,7 +27,7 @@ const icon = [
   { icon: <BsChat />, href: 'https://wa.link/91ftps' },
 ]
 
-export default function Layout(props: any) {
+export default function Layout(props) {
 
   const { pathname, hash, key } = useLocation();
   useEffect(() => {

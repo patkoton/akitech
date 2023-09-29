@@ -1,16 +1,8 @@
 import React from 'react'
 import Button from '../elements/Button';
 
-export type SectProps = {
-    headingH1?: React.ReactNode; 
-    img1?: string; 
-    img2?: string; 
-    img3?: string; 
-    img4?: string; 
-    img5?: string; 
-}
 
-const Sections = ({headingH1, img1, img2, img3, img4, img5}: SectProps) => {
+const Sections = ({ headingH1, img1, img2, img3, img4, img5 }) => {
   return (
     <div className='bg-darkWhite font-playfair font-semibold text-black pt-20'>
       <h1 className='text-xl md:text-3xl text-center'>{headingH1}</h1>

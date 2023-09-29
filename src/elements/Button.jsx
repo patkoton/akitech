@@ -1,15 +1,8 @@
-import React from 'react'
 import '../App.css'
 import { useNavigate } from 'react-router-dom';
 
-export type ButtonProps = {
-  // children?: React.ReactNode; // make the component able to receive children elements
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; // to handle onClick functions
-  children?: 'Contact Us' | 'Get Now' | string; // make the component able to receive children elements
-  className?: string
-}
 
-export default function Button({children, className}: ButtonProps) {
+export default function Button({ children }) {
   const navigate = useNavigate();
 
   function handleClick() {
