@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
-  const navigate = useNavigate();
+  const history = useHistory();
   const form = useRef();
 
   const [user_name, setName] = useState("");
@@ -16,15 +16,13 @@ const Contact = () => {
       event.preventDefault();
 
       emailjs.sendForm('service_fb0h3r9', 'template_vs8fpyr', form.current, 'Pl2-CWjPBJYUaQXcu')
-      .then((response)=>{
-        if (response.data.status === 'success') {
-            alert("Message Sent.");
-            navigate('/my-new-page');
-            resetForm();
-        } else if (response.data.status === 'fail') {
-            alert("Message failed to send.")
-        }
-      })
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        history.push('/my-new-page'); // Redirect to new page
+        resetForm();
+        }, (err) => {
+        console.log('FAILED...', err);
+      });
 
       const resetForm = () => {
         setName('')
@@ -32,7 +30,7 @@ const Contact = () => {
         setPhone('')
         setMessage('')
       }    
-  }
+  } 
 
   return (
     <div className='bg-darkWhite pt-1 md:pb-20 md:px-60 font-inter text-black' id='contact'>
@@ -83,7 +81,7 @@ const Contact = () => {
                             autoComplete="tel"
                             className="block w-full rounded-md border-0 px-3.5 py-2 bg-lightWine text-black shadow-sm placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-active sm:text-sm sm:leading-6"
                             value={contact_number}
-                                onChange={(e) => setPhone(e.target.value)}
+                            onChange={(e) => setPhone(e.target.value)}
                         />
                         </div>
                       </div>
