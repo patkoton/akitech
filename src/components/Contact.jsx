@@ -18,7 +18,8 @@ const Contact = () => {
       emailjs.sendForm('service_fb0h3r9', 'template_vs8fpyr', form.current, 'Pl2-CWjPBJYUaQXcu')
       .then((response)=>{
         if (response.data.status === 'success') {
-            navigate('/my-new-page'); // Redirect to new page
+            alert("Message Sent.");
+            navigate('/my-new-page', {replace: true});
             resetForm();
         } else if (response.data.status === 'fail') {
             alert("Message failed to send.")
