@@ -19,7 +19,7 @@ const Contact = () => {
       .then((response)=>{
         if (response.data.status === 'success') {
             alert("Message Sent.");
-            navigate('/my-new-page', {replace: true});
+            navigate('/my-new-page');
             resetForm();
         } else if (response.data.status === 'fail') {
             alert("Message failed to send.")
