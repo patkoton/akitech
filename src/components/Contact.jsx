@@ -25,39 +25,39 @@ const Contact = () => {
               <div className="mx-auto px-5 md:px-0 mb-16 md:mb-10 max-w-xl sm:mt-10 pb-5">
                   <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                       <div>
-                          <label htmlFor="from_name" className="block text-sm md:text-base font-semibold leading-6 text-black">
+                          <label htmlFor="user_name" className="block text-sm md:text-base font-semibold leading-6 text-black">
                           Name
                           </label>
                           <div className="mt-2.5">
                           <input
                               type="text"
-                              name="from_name"
+                              name="user_name"
                               autoComplete="given-name"
                               className="block w-full rounded-md border-0 px-3.5 py-2 bg-lightWine text-black shadow-sm placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-active sm:text-sm sm:leading-6"
                           />
                           </div>
                       </div>
                       <div className="">
-                          <label htmlFor="from_email" className="block text-sm md:text-base font-semibold leading-6 text-black">
+                          <label htmlFor="user_email" className="block text-sm md:text-base font-semibold leading-6 text-black">
                           Email
                           </label>
                           <div className="mt-2.5">
                           <input
                               type="email"
-                              name="from_email"
+                              name="user_email"
                               autoComplete="email"
                               className="block w-full rounded-md border-0 px-3.5 py-2 bg-lightWine text-black shadow-sm placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-active sm:text-sm sm:leading-6"
                           />
                           </div>
                       </div>
                       <div>
-                        <label htmlFor="phone" className="block text-sm md:text-base font-semibold leading-6 text-black">
+                        <label htmlFor="contact_number" className="block text-sm md:text-base font-semibold leading-6 text-black">
                         Phone Number
                         </label>
                         <div className="mt-2.5">
                         <input
                             type="text"
-                            id="phone"
+                            name="contact_number"
                             autoComplete="tel"
                             className="block w-full rounded-md border-0 px-3.5 py-2 bg-lightWine text-black shadow-sm placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-active sm:text-sm sm:leading-6"
                         />
