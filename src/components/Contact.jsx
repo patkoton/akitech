@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+//import { useHistory } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
-  const history = useHistory();
+  //const history = useHistory();
   const form = useRef();
 
   const [user_name, setName] = useState("");
@@ -18,7 +18,7 @@ const Contact = () => {
       emailjs.sendForm('service_fb0h3r9', 'template_vs8fpyr', form.current, 'Pl2-CWjPBJYUaQXcu')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        history.push('/my-new-page'); // Redirect to new page
+        //history.push('/my-new-page'); // Redirect to new page
         resetForm();
         }, (err) => {
         console.log('FAILED...', err);
