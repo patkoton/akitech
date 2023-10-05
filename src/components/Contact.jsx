@@ -21,7 +21,7 @@ const Contact = () => {
   } 
 
   return (
-    <div className='bg-darkWhite pt-1 md:pb-20 md:px-60 font-inter text-black' id='contact'>
+    <div className='bg-darkWhite pt-1 md:pb-20 lg:px-60 font-inter text-black' id='contact'>
         <div className="bg-white rounded-lg">
             <h1 className="font-medium text-lg md:text-2xl text-center pt-16 md:pt-10">Request a Quote</h1>
             <p className="font-normal text-xs md:text-base text-center px-5 md:px-24 mt-3 md:mt-5">Fill Out Our Form & We'll be in Touch Shortly</p>
