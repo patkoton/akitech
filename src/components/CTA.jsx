@@ -9,7 +9,7 @@ const CTA = () => {
         </div>
         <div className='w-full md:w-[450px] text-black'>
             <h2 className='font-medium text-xl md:text-3xl'>Still Confused? Or Have a Big Project in Mind</h2>
-            <p className='text-base text-justify md:text-xl mt-5 md:mt-10'>Lorem ipsum dolor sit amet consectetur. Nunc justo quam turpis bibendum sit velit dis neque. Erat nunc in non fermentum mauris tempor sed. Dictum diam vel in pharetra gravida proin sit. Etiam vel ultricies dui lobortis sed neque eget. Cras egestas cursus sed arcu scelerisque mollis ornare ipsum bibendum. Purus varius vulputate blandit aliquet ultrices. Amet massa diam pellentesque a venenatis sed. Ut congue.</p>
+            <p className='text-base text-justify md:text-xl mt-5 md:mt-10'>Akitech is the innovative aluminium system that sets new standards. It revolutionises aluminium products with its unique reverse butt joint. It's faster to fabricate, saves materials, and reduces stockholding. It's adaptable, attractive, simple to install, and maintenance requirements are minimal.</p>
             <div className='mt-5 md:mt-10'>
                 <Button children='Contact Us' />
             </div>

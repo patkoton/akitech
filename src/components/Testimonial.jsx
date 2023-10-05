@@ -67,7 +67,7 @@ const Testimonial = () => {
                                             <AiFillStar strokeWidth={2} className="text-orange" />
                                         </div>
                                     </div>
-                                    <p className="text-base font-normal mt-2.5">{item.description}</p>
+                                    <p className="text-base font-normal mt-2.5"><span className="text-base font-black">"</span>{item.description}<span className="text-base font-black">"</span></p>
                                 </div>
                             )
                         })}
@@ -136,7 +136,7 @@ const Testimonial = () => {
                                             <AiFillStar strokeWidth={2} className="text-orange" />
                                     </div>
                                 </div>
-                                <p className="text-xs font-normal mt-2.5">{item.description}</p>
+                                <p className="text-xs font-normal mt-2.5"><span className="text-xs font-black">"</span>{item.description}<span className="text-xs font-black">"</span></p>
                             </div>
                         </div>
                     )
