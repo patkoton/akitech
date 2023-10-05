@@ -39,13 +39,13 @@ const image4 = (() => ({
 export const testContent = [
     {
         image: image4.t_img1,
-        name: 'Adaralegbe S',
+        name: 'Adara Sammy',
         role: 'Customer',
         description: 'The superb aesthetics of Akitech completely raise the bar in aluminium system design. First impressions are that it will be quicker and easier to fabricate than other traditional aluminium systems. But more importantly for our customers, it\'s an installer\'s dream, which is a huge selling point for us.'
     },
     {
         image: image4.t_img2,
-        name: 'Orukotan J',
+        name: 'Oruks Jane',
         role: 'Customer',
         description: 'Our installers like the rapid installation thanks to the pre-gasketed knock-in glazing beads that save so much time when fitting. The pre-inserted gaskets don\'t overstretch either, which adds to the overall door high-end aesthetics but also eliminates call backs to site. For my money it\'s the best aluminium bifold door on the market'
     },
